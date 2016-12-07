@@ -1,0 +1,122 @@
+//
+// Chopstick settings
+//
+
+// Debug
+
+$debug-mode: false;
+
+// Typography
+
+$show-baseline-grid: false; // toggle the visibility of the baseline (true/false)
+$baseline-holder: holder; // set the classname of the element which will show the baseline
+$grid-color: rgba(#000,0.1); // set the baseline grid color and opacity
+
+$alpha-font-family	: 'Open Sans', sans-serif;
+$beta-font-family 	: 'Josefin Slab', serif;
+
+$alpha-line-height	: 1.5; // em-value
+$alpha-baseline-grid: 7; // pixel-value
+$alpha-leading		: 1; // multiplier
+
+$alpha-font-size	: 16; // pixel-value
+
+$alpha-font-weight	: 400;
+$beta-font-weight	: 700;
+$gamma-font-weight	: 700;
+
+
+// Grid
+
+$grid-gutter	: 20;
+$grid-column	: 160;
+$grid-columns	: 6;
+
+
+// Breakpoints calculated in em's, always based on 16px base-value
+
+$bp1: 400/16*1em;
+$bp2: 600/16*1em;
+$bp3: 860/16*1em;
+$bp4: 960/16*1em;
+$bp5: 1140/16*1em;
+$bp6: 1400/16*1em;
+$bp7: 1700/16*1em;
+
+
+$hbp1: 600/16*1em;
+$hbp2: 800/16*1em;
+$hbp3: 1000/16*1em;
+$hbp4: 1200/16*1em;
+$hbp5: 1500/16*1em;
+
+// Modular scale settings
+
+$ratio				: 1.2;
+$importantnumber	: 44;
+$leading			: 1;
+$base-size			: $alpha-font-size/16*1em;
+
+
+// manual modular scale font sizes
+// based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
+
+$ms-2 				: 12;
+$ms-1 				: 14;
+$ms1 			 	: 18;
+$ms2 			 	: 21;
+$ms3 			 	: 23;
+$ms4 			 	: 28;
+$ms5 			 	: 31;
+$ms6 			 	: 37;
+$ms7 			 	: 42;
+$ms8 			 	: 50;
+$ms10 			 	: 56;
+$ms11			 	: 67;
+$ms12			 	: 75;
+$ms13			 	: 89;
+$ms14			 	: 100;
+
+
+// UI
+
+$radius			: 2px;
+$border-width	: 1px;
+$border-style	: solid;
+$depth			: 0%; // Range: 0-100%
+$contrast		: 91%; // Range: 0-100%
+$shadow			: 21%; // Range: 0-100%
+$highlight		: 0%; // Range: 0-100%
+
+
+// Colors
+
+$alpha-ui-color		: #d21919; // RED
+$beta-ui-color		: #f9f9f2; // BEIGE
+$gamma-ui-color		: #f9f9f2; // BEIGE
+
+$line-color			: #f7f7f0; // BEIGE - WHITE
+$error-color 		: red;
+$success-color 		: green;
+$notice-color 		: yellow;
+
+$fb-color			: #3b5998;
+
+// Tekst
+
+$alpha-text-color	: #231f20; // Dark grey
+$beta-text-color	: #6c6c6c; // Light grey
+$delta-text-color	: #f9f9f7; // White
+
+$white 				: #ffffff; // white white
+
+$bg-color			: $beta-ui-color;
+
+
+// Links
+
+$alpha-link-color			: $beta-ui-color;
+$alpha-link-colorhover		: darken($alpha-link-color, 10);
+$alpha-link-colorfocus		: darken($alpha-link-color, 10);
+$alpha-link-coloractive		: lighten($alpha-link-color, 10);
+$alpha-link-colorvisited	: darken($alpha-link-color, 5);

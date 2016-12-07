@@ -1,0 +1,45 @@
+{% if gallery %}
+  	<div id="demo">
+    	<div id="owl-gallery" class="owl-carousel">
+            {% for gallery in gallery %}        
+               
+               	<div class="item" data-sequence="{{ gallery.sequence }}">
+                  	<img src="http://{{ SITE_DOMAIN }}/src/Frontend/Files/Gallery/image/800x800/{{ gallery.img }}" onload="imgLoaded(this)" alt="{{ gallery.title }}">
+            		 <div class="gallery-item-overlay">
+	                	<svg class="gallery-plus" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+						<line class="st0" x1="300" y1="2.2" x2="300" y2="597.8"/>
+						<line class="st0" x1="597.8" y1="300" x2="2.2" y2="300"/>
+						</svg>
+	                </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="gallery-overlay displayNone" data-sequence="0">
+    	<div class="clickRegistration">
+		</div>
+
+    	<div class="inner">
+
+    			<svg version="1.1" class="gallery-overlay-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+					<rect x="-17.4" y="83.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -41.4214 100.0029)" class="st0" width="234.8" height="33.5"/>
+					<rect x="83.3" y="-17.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -41.4214 100.0004)" class="st0" width="33.5" height="234.8"/>
+				</svg>
+
+				<svg version="1.1" class="gallery-overlay-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 121.6 200" style="enable-background:new 0 0 121.6 200;" xml:space="preserve">
+					<polygon class="st0" points="118,195.9 59.1,195.9 3.6,100 59.1,4.1 118,4.1 62.5,100 "/>
+				</svg>
+
+				<svg version="1.1" class="gallery-overlay-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 121.6 200" style="enable-background:new 0 0 121.6 200;" xml:space="preserve">
+					<polygon class="st0" points="3.6,4.1 62.5,4.1 118,100 62.5,195.9 3.6,195.9 59.1,100 "/>
+				</svg>
+
+    			<img class="gallery-overlay-image" src="" alt="dumplings">
+
+    	</div>
+	</div>
+
+{% endif %}
+    

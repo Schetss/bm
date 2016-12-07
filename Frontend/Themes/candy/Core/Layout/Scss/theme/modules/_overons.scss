@@ -1,0 +1,178 @@
+//
+// Over ons (over ons - geschiedenis - small blocks)
+//
+
+
+// Module over ons
+
+.overons-widget {
+
+	// background-color: lighten($line-color,10);
+
+	.grid-item {
+		@include px-padding-lr(2,2);
+		margin-bottom: 2em;
+
+		img {
+			opacity: 0;
+		}
+	}
+
+	.loaded {
+		img {
+			opacity: 1;
+			-webkit-transition: .5s;
+			transition: .5s;
+		}
+	}
+
+	.grid-item:nth-child(odd) {
+		clear: left;
+	}
+
+
+	img {
+		@include margin-tb(0,1);
+		width: 100%;
+	}
+
+
+	h5 {	
+		text-align: center;
+	}
+
+	p {
+		text-align: justify;	
+	}
+
+	.subtitle {
+		padding-top: .25em;
+		color: $beta-text-color;
+		text-align: center;
+	}
+}
+
+
+
+
+// Module Geschiedenis
+
+.history-widget {
+	background-color: lighten($line-color,10);
+
+	.history-image{
+		@include mq($bp3){
+			display: none;
+		}
+		img {
+			opacity: 0;
+		}
+	}
+
+	.loaded {
+		img {
+			opacity: 1;
+			-webkit-transition: .5s;
+			transition: .5s;
+		}
+	}
+
+	.history-wrapper {
+		@include margin-tb(1,1);
+	}
+
+	.block {
+		margin-bottom: 1em;
+		position: relative;
+	}
+
+	.history {
+		position: relative;
+		@include padding-tb(1,1)
+	}
+
+	img {
+		width: 100%;	
+
+	}
+
+	h5 {
+		margin-top: -.15em;
+	}
+
+	p {
+		margin-top: .5em;
+		margin-bottom: .1em;
+	}
+
+	.subtitle {
+		font-size: .833em;
+		padding-top: 0;
+		color: $beta-text-color;
+	}
+
+	.grid-content {
+		@include px-padding-lr(1,0);
+	}
+
+}
+
+.history-show {
+	position: relative;
+	opacity: 1;
+	// z-index: 10;
+	-webkit-transition: 1s; 
+	transition: 1s;
+}
+
+.history-hide {
+	position: absolute;
+	top: 0;
+	z-index: -10;
+	opacity: 0;
+	-webkit-transition: 1s; 
+	transition: 1s;
+}
+
+
+
+// Module Small Blocks
+
+.smallBlocks {
+
+	h6 {
+		text-align: center;
+		margin-bottom: .75em;
+	}
+
+	img {
+		margin-bottom: 2em;
+		width: 40%;
+		margin-left: 30%;
+	}
+
+	p {
+		@include px-padding-lr(1,1);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+//
+// Forms
+// ---
+// Default markup for the form elements, based on the settings file.
+//
+
+// GENERAL
+
+form {
+	padding: 0 0 em(14);
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+
+	p:last-child {
+		position: relative;
+		width: 100%;
+	}
+}
+
+legend,
+label {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	@include baseline-dimensions(0,3,1);
+}
+
+// Input elements
+
+input[type="input"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[name="field_country_code"],
+input[name="field_city_code"],
+input[name="field_phone_int"],
+select[multiple],
+textarea {
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	// color: $alpha-text-color;
+	font-family: $alpha-font-family;
+	// margin: 0;
+	// border: 1px solid $beta-ui-color;
+	// @include border-box;
+	@include input-s;
+	// @include margin-tb(0,0.5);
+
+	&:focus {
+		// color: $beta-text-color;
+		// outline-color: $beta-ui-color;
+	}
+
+	// @include mq($bp3) {
+	// 	@include input-m;
+	// }
+
+	// @include mq($bp5) {
+	// 	@include input-l;
+	// }
+}
+
+
+// Placeholders
+
+::-webkit-input-placeholder {
+	font-style: italic;
+}
+
+::-moz-placeholder {
+	font-style: italic;
+}
+
+:-ms-input-placeholder {
+	font-style: italic;
+}
+
+
+
+//
+// link buttons
+//
+
+.cta-button {
+    font-family: $beta-font-family;
+    background-color: $beta-ui-color;
+    color: $delta-text-color;
+    font-weight: $beta-font-weight;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 0;
+    @include px-padding-lr(4,4);
+    @include padding-tb(.5,.55);
+    border: 1px solid transparent;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+	
+ 
+
+.cta-button:hover {
+  background-color: transparent;
+    color: $beta-ui-color;
+	border-color: $beta-ui-color;
+}
+
+
+
+

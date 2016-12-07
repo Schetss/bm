@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+	<Backend>
+		<ImageBlock>
+			<item type="label" name="AddImageBlock">
+				<translation language="nl"><![CDATA[Image Block toevoegen]]></translation>
+				<translation language="en"><![CDATA[add Image Block]]></translation>
+			</item>
+		</ImageBlock>
+		<Core>
+			<item type="label" name="ImageBlock">
+				<translation language="nl"><![CDATA[Image Block]]></translation>
+				<translation language="en"><![CDATA[Image Block]]></translation>
+			</item>
+			<item type="label" name="ImageBlockDetail">
+				<translation language="nl"><![CDATA[Image Block detail]]></translation>
+				<translation language="en"><![CDATA[Image Block detail]]></translation>
+			</item>
+			<item type="label" name="ImageBlockCategory">
+				<translation language="nl"><![CDATA[Image Block categorie]]></translation>
+				<translation language="en"><![CDATA[Image Block category]]></translation>
+			</item>
+			<item type="message" name="NoCategories">
+				<translation language="en"><![CDATA[no categories]]></translation>
+				<translation language="nl"><![CDATA[geen categorieën]]></translation>
+			</item>
+		</Core>
+	</Backend>
+	<Frontend>
+		<Core>
+		</Core>
+	</Frontend>
+</locale>

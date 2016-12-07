@@ -1,0 +1,321 @@
+{% extends '/Layout/Templates/base.html.twig' %}
+
+{% block actionbar %}
+  <div class="btn-toolbar pull-right">
+    <div class="btn-group" role="group">
+      {% if detailURL %}
+        {% set url = (detailURL ~ '/' ~ item.url) %}
+        {% if item.revision_id %}
+          {% set url = (url ~ '?revision=' ~ item.revision_id) %}
+        {% endif %}
+
+        {{ macro.buttonIcon( url, 'eye', 'lbl.View'|trans|ucfirst) }}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% form edit %}
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="title" class="control-label">{{ 'lbl.Title'|trans|ucfirst }}</label>
+        {% form_field title %} {% form_field_error title %}
+       {#  {% if detailURL %}
+          <a class="site-url" href="{{ detailURL }}/{{ item.url }}">{{ detailURL }}/<span id="generatedUrl">{{ item.url }}</span></a>
+        {% endif %}
+        {% if not detailURL %}
+          <p class="alert alert-warning alert-xs">
+            <span class="fa fa-exclamation-triangle"></span>{{ 'err.NoModuleLinked'|trans|ucfirst }}</p>
+        {% endif %} #}
+      </div>
+    </div>
+  </div>
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#tabContent" aria-controls="tabContent" role="tab" data-toggle="tab">{{ 'lbl.Content'|trans|ucfirst }}</a>
+          </li>
+          <li class="pull-right" role="presentation">
+            <a href="#tabSEO" aria-controls="tabSEO" role="tab" data-toggle="tab">{{ 'lbl.SEO'|trans|ucfirst }}</a>
+          </li>
+          <li class="pull-right" role="presentation">
+            <a href="#tabVersions" aria-controls="tabVersions" role="tab" data-toggle="tab">{{ 'lbl.Versions'|trans|ucfirst }}</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tabContent">
+            <div class="row">
+              <div class="col-md-8">
+               
+               <h4>Geen naam invullen is image niet tonen.<br /><br /></h4>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title_1'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title_1 %} {% form_field_error title_1 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl1 %} {% form_field_error linkurl1 %}</p>
+
+                      {% if item.image1 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image1/160x160/{{ item.image1 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image1'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image1 %} {% form_field_error image1 %}
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title2'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title2 %} {% form_field_error title2 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl2 %} {% form_field_error linkurl2 %}</p>
+                      
+                      {% if item.image2 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image2/160x160/{{ item.image2 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image2'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image2 %} {% form_field_error image2 %}
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title3'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title3 %} {% form_field_error title3 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl3 %} {% form_field_error linkurl3 %}</p>
+
+                        {% if item.image3 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image3/160x160/{{ item.image3 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image3'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image3 %} {% form_field_error image3 %}
+                      
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title4'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title4 %} {% form_field_error title4 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl4 %} {% form_field_error linkurl4 %}</p>
+
+                        {% if item.image4 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image4/160x160/{{ item.image4 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image4'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image4 %} {% form_field_error image4 %}
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title5'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title5 %} {% form_field_error title5 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl5 %} {% form_field_error linkurl5 %}</p>
+
+                        {% if item.image5 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image5/160x160/{{ item.image5 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image5'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image5 %} {% form_field_error image5 %}
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title6'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title6 %} {% form_field_error title6 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl6 %} {% form_field_error linkurl6 %}</p>
+
+                        {% if item.image6 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image6/160x160/{{ item.image6 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image6'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image6 %} {% form_field_error image6 %}
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title7'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title7 %} {% form_field_error title7 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl7 %} {% form_field_error linkurl7 %}</p>
+
+                        {% if item.image7 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image7/160x160/{{ item.image7 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image7'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image7 %} {% form_field_error image7 %}
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title8'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title8 %} {% form_field_error title8 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl8 %} {% form_field_error linkurl8 %}</p>
+
+                        {% if item.image8 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image8/160x160/{{ item.image8 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image8'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image8 %} {% form_field_error image8 %}
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title9'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      <p>{% form_field title9 %} {% form_field_error title9 %}</p>
+                      <p>Url</p>
+                      <p>{% form_field linkurl9 %} {% form_field_error linkurl9 %}</p>
+
+                        {% if item.image9 %}
+                        <div>
+                          <img src="{{ FRONTEND_FILES_URL }}/ImageBlock/image9/160x160/{{ item.image9 }}" class="img-thumbnail" width="160" height="160" alt="{{ 'lbl.Image9'|trans|ucfirst }}" />
+                        </div>
+                      {% endif %}
+                      {% form_field image9 %} {% form_field_error image9 %}
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p>{{ 'lbl.MetaData'|trans|ucfirst }}</p>
+                  </div>
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label for="categoryId" class="control-label">{{ 'lbl.Category'|trans|ucfirst }}</label>
+                      {% form_field category_id %} {% form_field_error category_id %}
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row fork-module-actions">
+    <div class="col-md-12">
+      <div class="btn-toolbar">
+        <div class="btn-group pull-left" role="group">
+          {% if showBlogDelete %}
+            <button type="button" class="btn btn-danger" id="blog-delete" data-toggle="modal" data-target="#confirmDelete">
+              <span class="fa fa-trash-o"></span>
+              {{ 'lbl.Delete'|trans|ucfirst }}
+            </button>
+          {% endif %}
+        </div>
+        <div class="btn-group pull-right" role="group">
+         
+          <button id="editButton" type="submit" name="edit" class="btn btn-primary">
+            <span class="fa fa-check"></span>{{ 'lbl.Publish'|trans|ucfirst }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if showBlogDelete %}
+    <div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-labelledby="blog-delete" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="modal-title h4">{{ 'lbl.Delete'|trans|ucfirst }}</span>
+          </div>
+          <div class="modal-body">
+            <p>{{ 'msg.ConfirmDelete'|trans|format(item.title)|raw }}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <span class="fa fa-times"></span>{{ 'lbl.Cancel'|trans|ucfirst }}
+            </button>
+            <a href="{{ geturl('delete') }}&amp;id={{ item.id }}{% if categoryId %}&amp;category={{ categoryId }}{% endif %}" class="btn btn-danger">
+              <span class="fa fa-trash"></span>{{ 'lbl.Delete'|trans|ucfirst }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <div class="modal fade" id="addCategoryDialog" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-title h4">{{ 'lbl.AddCategory'|trans|ucfirst }}</span>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="categoryTitle" class="control-label">
+              {{ 'lbl.Title'|trans|ucfirst }}
+              {{ macro.required }}
+            </label>
+            <input type="text" name="categoryTitle" id="categoryTitle" class="form-control" maxlength="255" />
+            <p class="text-danger" id="categoryTitle'err.r" style="display: none;">{{ 'err.FieldIsRequired'|trans|ucfirst }}</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            <span class="fa fa-times"></span>{{ 'lbl.Cancel'|trans|ucfirst }}
+          </button>
+          <button id="addCategorySubmit" type="button" class="btn btn-primary">
+            <span class="fa fa-plus-square"></span>{{ 'lbl.AddCategory'|trans|ucfirst }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endform %}
+{% endblock %}

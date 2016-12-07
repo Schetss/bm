@@ -1,0 +1,31 @@
+ {% if carousel %}
+    {% for carousel in carousel %}        
+        <div class="carousel-item">
+          <div class="carousel-img">
+            <ul id="scene">
+              <li class="layer" data-depth="0.30"><img src="http://{{ SITE_DOMAIN }}/src/Frontend/Files/Carousel/main_image/3000x2500/{{ carousel.mainimg }}" onload="imgLoaded(this)" alt="{{ carousel.title }}">
+             
+            </ul>
+            <div class="carousel-overlay">
+            </div>
+          </div>
+       </div>    
+       <div class="carousel-text carousel-inner">
+          <div class="logo"><img src="http://{{ SITE_DOMAIN }}/src/Frontend/Themes/candy/Core/Layout/images/logo.svg" alt="Bel Mondo"></div>
+          <div class="baseline">
+            <div class="fork">
+              <img src="http://{{ SITE_DOMAIN }}/src/Frontend/Themes/candy/Core/Layout/images/fork.svg" alt="fork">
+            </div>
+            <h1>Catering</h1>
+            <div  class="knife">
+              <img src="http://{{ SITE_DOMAIN }}/src/Frontend/Themes/candy/Core/Layout/images/knife.svg" alt="knife">
+            </div>
+            <div class="clear"></div>
+          </div>
+
+       </div>             
+       <hr class="bottom-line bottom-line-bottom">
+    {% endfor %}
+{% endif %}
+
+

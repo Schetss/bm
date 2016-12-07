@@ -1,0 +1,13 @@
+
+{# General Javascript #}
+{% for js in jsFiles %}
+  <script src="{{ js.file }}"></script>
+{% endfor %}
+
+
+{# Theme specific Javascript #}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="{{ THEME_URL }}/Core/Js/min/parallax-min.js"></script>
+<script src="{{ THEME_URL }}/Core/Js/min/jquery.scrollto-min.js"></script>
+<script src="{{ THEME_URL }}/Core/Js/min/slider-min.js"></script>
+<script src="{{ THEME_URL }}/Core/Js/min/theme-min.js"></script>

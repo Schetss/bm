@@ -1,0 +1,213 @@
+{% include "Core/Layout/Templates/Head.html.twig" %}
+
+<body class="{{ LANGUAGE }}" itemscope itemtype="http://schema.org/WebPage">
+  
+{% include "Core/Layout/Templates/Cookies.html.twig" %}
+
+
+  {# HEADER #}
+
+  <header id="header" class="headerStart" {% if page.data.image %}style="background-image:url({{ FRONTEND_FILES_URL~'/pages/images/source/'~page.data.image }})" {% endif %}>
+    <div class="container">
+
+      {# Navigation #}
+      <nav id="main-nav">
+        {{ getnavigation('page', 0, 1) }}
+      </nav>
+
+    </div>
+
+  </header>
+
+  {# MAIN CONTENT #}
+
+   {# Carousel #}
+
+    {% for Carousel in positions.Carousel %}
+      {% if Carousel.html %}
+        <div id="carousel">
+          {{ Carousel.html|raw }}
+        </div>
+      {% endif %}
+    {% endfor %}
+   
+
+    {# Content #}
+    
+    <div id="topWrapper">
+      <div id="main">
+        <div class="container">
+
+          {# Alert #}  
+         
+          {% for Alert in positions.Alert %}
+            {% if Alert.html %}
+              <div id="notification">
+                {{ Alert.html|raw }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        
+
+        {# Main column #} 
+
+          {# BLOCK 1 #}
+        
+          <div class="container-inner">
+
+            {# Intro #} 
+
+            <div class="grid intro-block-1">
+              <div class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-1 grid-l-1-1d">
+                {% for Intro in positions.Intro %}
+                  {% if Intro.html %}
+                    {{ Intro.html|raw }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="clear"></div>
+            </div>
+
+            {# Titel 1 #} 
+
+            <div class="grid">
+              <div id="allefeesten" class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-1 grid-l-1-1 title-block">
+                {% for Titel1 in positions.Titel1 %}
+                  {% if Titel1.html %}
+                    {{ Titel1.html|raw }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+                      
+            {# Content 1 #} 
+          
+            {% for Content1 in positions.Content1 %}
+              {% if Content1.html %}
+                {{ Content1.html|raw }}
+              {% endif %}
+            {% endfor %}
+
+
+            {# Titel 2 #} 
+
+            <div class="grid">
+              <div id="realisaties" class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-1 grid-l-1-1 title-block">
+                {% for Titel2 in positions.Titel2 %}
+                  {% if Titel2.html %}
+                    {{ Titel2.html|raw }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="clear"></div>
+            </div>
+                      
+            {# Content 2 #} 
+
+            {% for Content2 in positions.Content2 %}
+              {% if Content2.html %}
+                {{ Content2.html|raw }}
+              {% endif %}
+            {% endfor %}
+
+
+            {# Titel 3 #} 
+
+            <div class="grid">
+              <div id="contact" class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-1 grid-l-1-1 title-block">
+                {% for Titel3 in positions.Titel3 %}
+                  {% if Titel3.html %}
+                    {{ Titel3.html|raw }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+
+            {# Content 3 #} 
+            <div class="grid map-grid">
+              <div class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-2 grid-l-1-2 ">
+                 {% for Content3left in positions.Content3left %}
+                  {% if Content3left.html %}
+                    {{ Content3left.html|raw }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-2 grid-l-1-2 contact-info">
+                  
+                {% for Content3right in positions.Content3right %}
+                  {% if Content3right.html %}
+                    {{ Content3right.html|raw }}
+                  {% endif %}
+                {% endfor %}
+
+              </div>
+            </div>
+
+
+          </div>
+       
+          {# END CONTAINER !!! #}
+
+            
+         
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    
+    <div id="bottomWrapper">
+
+         {% for FooterMiddle in positions.FooterMiddle %}
+            {% if FooterMiddle.html %}
+              {{ FooterMiddle.html|raw }}
+            {% endif %}
+          {% endfor %}
+
+      <div class="container">
+        <div class="container-inner">
+          {# Titel 4 #} 
+          <div class="grid">
+            <div id="form" class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-1 grid-l-1-1 title-block">
+              {% for Titel4 in positions.Titel4 %}
+                {% if Titel4.html %}
+                  {{ Titel4.html|raw }}
+                {% endif %}
+              {% endfor %}
+              <p class="tel-cta">0498 384 660</p>
+              <p class="tel-cta-2">of</p>
+            </div>
+          </div>
+
+          {# Content 4 #} 
+          <div class="grid">
+            <div class="grid-item grid-xs-1-1 grid-s-1-1 grid-m-1-1 grid-l-1-1">
+              {% for Content4 in positions.Content4 %}
+                {% if Content4.html %}
+                  {{ Content4.html|raw }}
+                {% endif %}
+              {% endfor %}
+            </div>
+             <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <noscript>
+      <div class="message notice">
+        <h4>{{ 'lbl.EnableJavascript'|trans|ucfirst }}</h4>
+        <p>{{ 'msg.EnableJavascript'|trans }}</p>
+      </div>
+    </noscript>
+ 
+
+
+{# FOOTER #}
+
+
+  {% include "Core/Layout/Templates/Footer.html.twig" %}
+
+{# Site wide HTML #}
+{{ siteHTMLFooter|raw }}
+</body>
+</html>

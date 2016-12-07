@@ -1,0 +1,162 @@
+//
+// WRAPPER
+//
+
+.container {
+  padding: 0;
+  @extend %clearfix;
+  width: 100%;
+}
+
+.container-inner {
+	// overflow: hidden;
+	@extend %clearfix;
+	margin: 0 auto;
+	max-width: $grid-width/$alpha-font-size*1em;
+	@include px-padding-lr(0,0) ;
+
+	@include mq($bp2){
+		@include px-margin-lr(1,1);
+	}
+
+	@include mq($bp5){
+		@include px-padding-lr(2,2);
+	}
+
+	@include mq($bp3){
+		@include px-padding-lr(1,1);
+	}
+
+	.container-inner {
+		@include px-padding-lr(0,0);
+
+		@include mq($bp2){
+		@include px-margin-lr(0,0);
+	}
+
+	@include mq($bp5){
+		@include px-padding-lr(0,0);
+	}
+
+	@include mq($bp3){
+		@include px-padding-lr(0,0);
+	}
+
+
+	}
+
+}
+
+
+
+
+//
+// GRID
+//
+
+
+.grid {
+	clear: both;
+	width: 102%;
+	margin-left: -1%;
+	margin-right: -1%;
+}
+
+.grid-item {
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+//
+// MEDIA QUERIES
+//
+
+	@include mq($bp2){
+		.grid-xs-1-1 {
+			width: 98%;
+		}
+
+		.grid-xs-1-2 {
+			width: 48%;
+		}
+	}
+
+@include omq($bp2){
+	@include mq($bp3){
+		.grid-s-1-1 {
+			width: 98%;
+		}
+
+		.grid-s-1-2 {
+			width: 48%;
+		}
+
+		.grid-s-1-3 {
+			width: 31.33%;
+		}
+
+		.grid-s-2-3 {
+			width: 64.66%;
+		}
+
+		.grid-s-1-3 {
+			width: 31.33%;
+		}
+
+		.grid-s-2-3 {
+			width: 64.66%;
+		}
+	}
+}
+
+@include omq($bp3){
+	@include mq($bp4){
+		.grid-m-1-1 {
+			width: 98%;
+		}
+
+		.grid-m-1-2 {
+			width: 48%;
+		}
+
+		.grid-m-1-3 {
+			width: 31.33%;
+		}
+
+		.grid-m-2-3 {
+			width: 64.66%;
+		}
+	}
+}
+
+
+@include omq($bp4){
+	.grid-l-1-1 {
+		width: 98%;
+	}
+
+	.grid-l-1-2 {
+		width: 48%;
+	}
+
+	.grid-l-1-3 {
+		width: 31.33%;
+	}
+
+	.grid-l-2-3 {
+		width: 64.66%;
+	}
+
+	.grid-l-1-4 {
+		width: 23%;
+	}
+
+	.grid-l-2-4 {
+		width: 47%;
+	}
+
+	.grid-l-3-4 {
+		width: 73%;
+	}
+}

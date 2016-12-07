@@ -1,0 +1,67 @@
+//
+// Makelaars
+//
+
+.makelaar {
+	@include mq($bp3){
+		display: none;
+	}
+
+	.agent-img{
+		@include mq($bp4){
+			display: none;
+		}
+	}
+
+	header {
+		background-color: $alpha-ui-color; 
+		@include padding-tb(.3,.3);
+		text-align: center;
+		@include px-padding-lr(.2,.2);
+		h6 {
+			color: $gamma-ui-color;
+		}
+	}
+
+	.name {
+		font-weight: $gamma-font-weight;
+		@include margin-tb(.2,.4);
+	}
+
+
+
+	.makelaar-img {
+		-webkit-border-radius: 100%; /* Saf3+, Chrome */
+		border-radius: 100%; /* Opera 10.5, IE 9 */
+		-moz-border-radius: 100%; 
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+
+
+	.grid-item {
+		@include px-padding-lr(1,1);
+	}
+	
+}
+
+.makelaar-conent {
+	@include padding-tb(.5,1);
+	border: 1px solid $line-color;
+
+
+	p {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.makelaar-desc {
+
+	a {
+		margin-top: .5em;
+	}
+}

@@ -1,0 +1,458 @@
+//
+// Header
+//
+
+
+#header {
+  	z-index: 99;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	@include px-padding-lr(4,4);
+	@include padding-tb(1,1);
+}
+
+.headerStart {
+	@include background-opacity($alpha-ui-color,0);
+	-webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.headerAction {
+	@include background-opacity($alpha-ui-color,.95);
+	-webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+
+.headerAction2 {
+	opacity: 0;
+}
+
+// #logo {
+// 	float: left;
+	
+// 	img {
+// 		width: 150px;
+// 	}
+// }
+
+//
+// Lines
+//
+
+.bottom-line {
+	margin: 0;
+	padding: 0;
+   	width: 100%;
+    border: 0;   
+    position: absolute;
+}
+
+.bottom-line-bottom {
+ box-shadow: inset 0 -50px 50px -50px rgba(0, 0, 0, 0.5);
+   	height: 50px;
+    bottom: 0;
+}
+
+.bottom-line-top {
+ box-shadow: inset 0 -20px 20px -20px rgba(0, 0, 0, 0.5);	
+   	height: 20px;
+	top: 0;
+	margin-top: -20px;
+}
+
+.fading-line {
+ 	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(230, 231, 232, 0), rgba(230, 231, 232, 0.75), rgba(230, 231, 232, 0));
+}
+
+
+
+//
+// Alert / noitfication
+//
+
+#notification {
+	background-color: $beta-ui-color;
+	font-weight: $beta-font-weight;
+	font-family: $beta-font-family;
+	width: 100%;
+	font-size: 1.2em;
+	text-align: center;
+	color: $delta-text-color;
+	@include padding-tb(.2,.2);
+	line-height: 2em;
+	@include px-padding-lr(2,2);
+}
+
+
+
+
+//
+// Mobile Main
+//
+
+.not-bp4 {
+	@include mq($bp4) {
+		display: none !important;
+	}
+}
+
+//
+// Main
+//
+
+#main {
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+
+.container {
+	z-index: 99;
+}
+
+#topWrapper {
+	z-index: 99;
+}
+
+#bottomWrapper {
+	
+}
+
+.intro-block-1 {
+	background-color: $white;
+	margin-top: -6em;
+	@include padding-tb(2,2);
+	@include px-padding-lr(2,2);
+	text-align: center;
+	box-shadow: 0px 5px 15px lighten($beta-text-color,25);
+
+	h2 {
+		margin-bottom: .5em;
+	}
+
+	p {
+		font-size: 1.2em;
+		color: $beta-text-color;
+	}
+
+	a, a:visited {
+		@include margin-tb(1,0);
+		display: inline-block;
+		color: $alpha-ui-color;
+		@include padding-tb(.25,.25);
+		@include px-padding-lr(3,3);
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		border-radius: $radius;
+		position: relative;
+		font-weight: $beta-font-weight;
+		border: 2px solid $alpha-ui-color;		
+	}
+
+	a:hover {
+		background-color: $alpha-ui-color;
+		color: $delta-text-color;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+
+.text-block {
+	
+
+	h3::after {
+		@include margin-tb(.3,.3);
+		display: block;
+		content: '';
+		border-bottom: 1px solid $alpha-ui-color;
+		width: 20px;
+
+		@include mq($bp4){
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	p {
+		color: lighten($alpha-text-color, 35);
+		
+	}
+
+	@include mq($bp4){
+		text-align: center;
+		
+		p {
+			margin-bottom: 1.5em;
+		}
+	}
+
+	.grid-item:last-child {
+
+		@include mq($bp4){			
+			p {
+				margin-bottom: 0em;
+			}
+		}
+
+	}
+}
+
+
+.title-block {
+	@include margin-tb(3.5,3);
+	text-align: center;
+}
+
+
+
+
+
+ 
+
+//
+// Footer
+//
+
+#footer {
+
+}
+
+.footerMiddle {
+	@include margin-tb(0,2);
+	text-align: center;
+	color: lighten($alpha-text-color,30);
+	font-family: $beta-font-family;
+	font-size: .9em;
+	font-weight: $beta-font-weight;
+	text-transform: uppercase;
+
+	a:first-child {
+		margin-right: 20px;
+
+		@include mq($bp2) {
+			margin-right: 0;
+		}
+	}
+
+	a:last-child {
+		margin-left: 20px;
+
+		@include mq($bp2) {
+			margin-left: 0;
+		}
+	}
+
+	a {
+		position: relative;
+	    font-family: $beta-font-family;
+	    background-color: $alpha-ui-color;
+	    color: $delta-text-color;
+	    font-weight: $beta-font-weight;
+	    cursor: pointer;
+	    border-radius: 30px;
+	    border: 0;
+	    @include px-padding-lr(5,2);
+	    @include padding-tb(.5,.55);
+	    border: 1px solid transparent;
+	    -webkit-transition: all 0.3s ease-in-out;
+	    -moz-transition: all 0.3s ease-in-out;
+	    transition: all 0.3s ease-in-out;
+	    text-transform: lowercase;
+	    font-size: 1em;
+
+
+	    .tel-icon {
+	    	fill: $delta-text-color;
+			width: 20px;
+		    height: 20px;
+		    position: absolute;
+		    top: 0;
+		    margin-top: 9px;
+		    left: 0;
+		    margin-left: 20px;
+		    -webkit-transition: all .3s ease-in-out;
+		    -moz-transition: all .3s ease-in-out;
+		    transition: all .3s ease-in-out;
+
+
+		}
+
+		.mail-icon {
+			fill: $delta-text-color;
+			width: 20px;
+		    height: 20px;
+		     position: absolute;
+		    top: 0;
+		    margin-top: 10px;
+		    left: 0;
+		    margin-left: 20px;
+		    -webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+		}
+	}
+
+ 
+
+	a:hover {
+	  	background-color: transparent;
+    	color: $alpha-ui-color;
+		border-color: $alpha-ui-color;
+		-webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+
+		.tel-icon {
+			fill: $alpha-ui-color;
+			-webkit-transition: all .3s ease-in-out;
+		    -moz-transition: all .3s ease-in-out;
+		    transition: all .3s ease-in-out;
+		}
+
+		.mail-icon {
+			fill: $alpha-ui-color;
+			-webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+		}
+	}
+}
+
+.contact-cta {
+	@include margin-tb(2,5);
+}
+
+
+.contact-cta-tel {
+	@include margin-tb(0,2.5);
+
+	@include omq($bp2){
+		float: left;
+		width: 50%;
+		text-align: right;
+	}
+
+}
+
+.contact-cta-mail {
+	@include omq($bp2){
+		float: right;
+		width: 50%;
+		text-align: left;
+	}
+}
+
+
+.zigzag {
+  	position: relative;
+  	width: 100%;
+ 	@include padding-tb(1,1);	
+ }
+.zigzag:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	height: 10px;
+}
+
+.signature {
+	background: $alpha-ui-color;
+	text-align: center;
+
+  	img {
+  		width: 200px;
+
+  	}
+}
+
+
+.signature:before {
+	background:
+	linear-gradient(
+		  45deg, transparent 33.333%,
+		  $alpha-ui-color 33.333%,  $alpha-ui-color 66.667%,
+		  transparent 66.667%
+	),
+	linear-gradient(
+		  -45deg, transparent 33.333%,
+		   $alpha-ui-color 33.333%,  $alpha-ui-color 66.667%,
+		  transparent 66.667%
+	);
+	background-size: 20px 40px;
+}
+
+
+
+
+// }
+
+
+//
+// Cookiebar
+//
+
+#cookieBar {
+	@include px-padding-lr(2,2);
+	position: fixed;
+	font-family: $beta-font-family;
+	bottom: 0;
+	width: 100%;
+	background-color: lighten($alpha-text-color,20);
+	text-align: center;
+	color: $delta-text-color;
+	@include padding-tb(.6,.6);
+	z-index: 9999;
+	line-height: 2em;
+
+	.bottom-line-top {
+		left: 0;
+	}
+
+
+	a, a:visited {
+		white-space: nowrap;
+		color: $alpha-ui-color;
+		-webkit-transition: all 0.3s ease-in-out;
+	    -moz-transition: all 0.3s ease-in-out;
+	    transition: all 0.3s ease-in-out;
+	}
+
+	a:hover, a:active {
+		color: darken($alpha-ui-color, 20);
+		-webkit-transition: all 0.3s ease-in-out;
+	    -moz-transition: all 0.3s ease-in-out;
+	    transition: all 0.3s ease-in-out;
+	}
+
+}
+
+.cookie-close {
+	cursor: pointer;
+	fill: darken($delta-text-color,20);
+	width: 20px;
+	margin-top: 5px;
+	float: right;
+	margin-left: 20px;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.cookie-close:hover {
+	fill: $delta-text-color;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+

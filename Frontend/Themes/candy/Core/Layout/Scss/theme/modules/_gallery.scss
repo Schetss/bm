@@ -1,0 +1,208 @@
+//
+// Gallery
+//
+
+#gallery {
+    @include margin-tb(2,0);
+
+.demo {
+ 	img {
+	  opacity: 0;
+	}
+
+	.loaded {
+		img {
+		  opacity: 1;
+		  -webkit-transition: all 0.3s ease-in-out;
+		  -moz-transition: all 0.3s ease-in-out;
+		  transition: all 0.3s ease-in-out;
+		}
+	}
+}
+    .item {
+    	position: relative;
+    	cursor: pointer;
+
+    	.gallery-item-overlay {
+			// @include background-opacity($alpha-text-color, .8);
+			background-color: $alpha-text-color;
+			opacity: 0;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			-webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+		}
+
+		.gallery-plus {
+			stroke: $delta-text-color;
+			stroke-width:90;
+			stroke-miterlimit:10;
+			width: 20%;
+			margin-left: 40%;
+			margin-top: 40%;
+		}
+    }
+
+    .item:hover {
+    	.gallery-item-overlay {
+    		opacity: .7;
+    		-webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+    	}
+    }
+}
+
+
+
+//
+// page overlay
+//
+
+
+.gallery-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 99999;
+  	top:        0; 
+	left:       0; 
+	@include background-opacity($alpha-text-color, .8);
+
+	img {
+		max-height: 50%;
+		max-width: 100%;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+
+.gallery-overlay-left, .gallery-overlay-right {
+	@include padding-tb(1,1);
+	border-radius: 15px;
+	background-color: $delta-text-color;
+	fill: $alpha-text-color;
+	opacity: .4;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 100px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 99999;
+}
+
+.gallery-overlay-left {
+	@include px-padding-lr(4,3);
+	margin-left: -15px;
+	left: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-overlay-right {
+	@include px-padding-lr(3,4);
+	margin-right: -15px;
+	right: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-overlay-left:hover {
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-overlay-right:hover {
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.gallery-overlay-close {
+	fill: $delta-text-color;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	margin-top: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-overlay-close:hover {
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.displayNone{
+ 	visibility: hidden;
+  	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.displayBlock{
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.clickRegistration {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+
+
+
+
+/*
+*   Owl Carousel Owl Demo Theme 
+*   v1.3.3
+*/
+#owl-gallery .item{
+  margin: 3px;
+}
+
+
+#owl-gallery .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+

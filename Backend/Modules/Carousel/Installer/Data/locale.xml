@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+	<Backend>
+		<Carousel>
+			<item type="label" name="AddCarousel">
+				<translation language="nl"><![CDATA[Carousel toevoegen]]></translation>
+				<translation language="en"><![CDATA[add Carousel]]></translation>
+			</item>
+		</Carousel>
+		<Core>
+			<item type="label" name="Carousel">
+				<translation language="nl"><![CDATA[Carousel]]></translation>
+				<translation language="en"><![CDATA[Carousel]]></translation>
+			</item>
+			<item type="label" name="CarouselDetail">
+				<translation language="nl"><![CDATA[Carousel detail]]></translation>
+				<translation language="en"><![CDATA[Carousel detail]]></translation>
+			</item>
+			<item type="label" name="CarouselCategory">
+				<translation language="nl"><![CDATA[Carousel categorie]]></translation>
+				<translation language="en"><![CDATA[Carousel category]]></translation>
+			</item>
+			<item type="message" name="NoCategories">
+				<translation language="en"><![CDATA[no categories]]></translation>
+				<translation language="nl"><![CDATA[geen categorieën]]></translation>
+			</item>
+		</Core>
+	</Backend>
+	<Frontend>
+		<Core>
+		</Core>
+	</Frontend>
+</locale>

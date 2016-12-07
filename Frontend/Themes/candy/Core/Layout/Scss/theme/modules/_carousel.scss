@@ -1,0 +1,334 @@
+//
+// Carousel
+//
+
+
+#carousel {
+	position: relative;
+	width: 100%;
+	height: 90%;
+	overflow: hidden;
+  z-index: -10;
+
+  @include mq($bp3){
+    height: 70%;
+  }
+
+  @include mq($bp2){
+    height: 60%;
+  }
+
+
+  @include hmq($hbp1){
+    height: 80%;
+  }
+
+  @include hmq($hbp2){
+    
+    @include mq($bp5){
+      height: 70%;
+    }
+
+    @include mq($bp3){
+      height: 60%;
+    }
+
+    @include mq($bp2){
+      height: 50%;
+    }
+  }
+  
+
+  @include hmq($hbp3){
+    @include mq($bp6){
+      height: 75%;
+    }
+
+    @include mq($bp5){
+      height: 60%;
+    }
+
+    @include mq($bp3){
+      height: 50%;
+    }
+
+    @include mq($bp1){
+      height: 40%;
+    }
+
+  }
+
+  @include hmq($hbp4){
+
+      @include mq($bp5){
+        height: 55%;
+      }
+
+      @include mq($bp3){
+        height: 40%;
+      }
+
+      @include mq($bp1){
+        height: 35%;
+      }
+
+    }
+
+    @include hmq($hbp5){
+      @include mq($bp6){
+          height: 65%;
+        }
+
+        @include mq($bp5){
+          height: 50%;
+        }
+
+        @include mq($bp3){
+          height: 30%;
+        }
+
+        @include mq($bp1){
+          height: 25%;
+        }
+
+    }
+}
+
+
+.carousel-item {
+  position: relative;
+    img {
+    	width: 100%;
+
+      
+    }
+
+    ul {
+      li:first-child{
+        img {
+          margin-left: -10%;
+          margin-top: -10%;
+          width: 120%;
+          
+          @include mq($bp3){
+
+          margin-left: -30%;
+          margin-top: -30%;
+          width: 160%;
+          //   height: 100%;
+          //   margin-left: 0;
+          //   margin-right: 0;
+          //   width: auto;
+          }
+        }
+
+
+        @include mq($bp2){
+          margin-left: -50%;
+          margin-top: -50%;
+          width: 200%;
+        }
+      }
+    }
+
+
+}
+
+.carousel-img {
+
+
+    img {
+      opacity: 0;
+    }
+
+  .loaded {
+    img {
+      opacity: 1;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+
+
+.logo {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  @include margin-tb(0,2);
+}
+
+
+
+.carousel-text {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: $delta-text-color;
+  // width: 80%;
+  // margin-left: 10%;
+
+  .baseline {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    display: table;
+    white-space: nowrap;
+    &:before, &:after {
+      border-top: 4px solid $delta-text-color;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 1.5em;
+      width: 45%;
+    }
+    &:before { right: -5px; }
+    &:after { left: -5px; }
+  }
+
+  h1, .fork, .knife {
+    display:inline-block;
+  }
+
+  h1 {
+    font-family: $beta-font-family;
+    font-weight: $alpha-font-weight;
+     color: $delta-text-color;
+     @include px-margin-lr(3,3);
+     font-size: 2.44em;
+
+    @include mq($bp2) {
+      font-size: 1.78em;
+    }
+  }
+
+  .fork, .knife {
+    width: 40px;
+
+    img {
+      width: 20px;
+      margin-top: -5px;
+    }
+  }
+
+  .fork {
+    img {
+      float: left;
+    }
+  }
+
+  .knife {
+    img {
+      float: right;
+    }
+  }
+
+
+
+  p {
+   
+
+    font-size: 1.2em;
+    
+    @include mq($bp3) {
+     font-size: 1em;
+    }
+
+    @include omq($bp7){
+      font-size: 1.44em;
+    }
+
+  }
+
+  a {
+    font-size: .75em;
+    font-family: $beta-font-family;
+    background-color: $beta-ui-color;
+    color: $delta-text-color;
+    font-weight: $beta-font-weight;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 0;
+    @include px-padding-lr(3,3);
+    @include padding-tb(.5,.55);
+    border: 1px solid transparent;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    
+
+    @include mq($bp3) {
+      display: none;
+      @include hmq($hbp1){
+        display: inline;
+      }
+    }
+
+    @include mq($bp2) {
+      display: none;
+    }
+
+  }
+
+
+  a:hover {
+    background-color: transparent;
+    // color: $beta-ui-color;
+    border-color: $delta-text-color;
+  }
+
+ 
+
+
+}
+
+
+.carousel-overlay {
+  @include background-opacity(darken($alpha-text-color,15), .3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+hr.style-four {
+    height: 30px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.slideShowImg{
+	opacity: 0;
+}
+
+
+
+.blurheader {
+	@include background-opacity($gamma-ui-color, 0.8);
+	height: 93px;
+	// height: 95px // language
+	width: 100%;
+	position: absolute;
+	z-index: -10;
+	-webkit-transition: 1s; 
+	transition: 1s;
+
+	@include mq($bp3){
+		height: 93px;
+	}
+
+	@include mq($bp2){
+		height: 91px;
+	}
+ }
+
+
+
+

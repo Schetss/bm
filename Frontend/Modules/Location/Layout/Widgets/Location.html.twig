@@ -6,7 +6,7 @@
 
 {% if widgetLocationItem %}
   {# @remark: do not remove the parseMap-class, it is used by JS #}
-  <div id="map{{ widgetLocationItem.id }}" class="parseMap" style="height: {{ widgetLocationSettings.height }}px; width: {{ widgetLocationSettings.width }}px;"></div>
+  <div id="map{{ widgetLocationItem.id }}" class="parseMap" ></div>
 
   {% if widgetLocationSettings.directions %}
     <aside id="locationSearch{{ widgetLocationItem.id }}" class="locationSearch">

@@ -1,0 +1,282 @@
+//
+// Image block
+//
+
+
+
+#imageblock {
+
+	
+	img {
+		opacity: 0;
+	}
+
+	.loaded {
+		img {
+			opacity: 1;
+			 -webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    	transition: all 0.3s ease-in-out;
+		}
+	}
+}
+
+.imageblock-block {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 25px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+	
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -999;
+		-webkit-transition: all 0.3s ease-in-out;
+	    -moz-transition: all 0.3s ease-in-out;
+	    transition: all 0.3s ease-in-out;
+	}
+
+
+
+	.imageblock-fade {
+		@include background-opacity($alpha-text-color,0.1);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -99;
+	}
+
+	h3 {
+		text-align: center;
+		color: $delta-text-color;
+		text-shadow: 1px 1px $alpha-text-color;
+		-moz-text-shadow: 1px 1px $alpha-text-color;
+		-webkit-text-shadow: 1px 1px $alpha-text-color;
+		font-size: 1.44em;	
+	}
+}
+
+.imageblock-block:hover {
+	cursor: pointer;
+
+	img {
+		-webkit-filter: blur(2px);
+	    -moz-filter: blur(2px);
+	    -o-filter: blur(2px);
+	    -ms-filter: blur(2px);
+	    filter: blur(2px);
+	    -webkit-transition: all 0.3s ease-in-out;
+	    -moz-transition: all 0.3s ease-in-out;
+	    transition: all 0.3s ease-in-out;
+	}
+
+	@include background-opacity($alpha-text-color, .4);
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageblock-square, .imageblock-wide {
+
+
+	img {
+		width: 100%;
+		max-width: none;
+	}
+
+	h3 {
+		line-height: 280px;
+
+		@include mq($bp4){
+			line-height: 250px;
+		}
+	}
+}
+
+
+.imageblock-long {
+	// box-shadow: 0px 5px 15px lighten($beta-text-color,25);
+	
+
+	img {
+		height: 100%;
+		max-height: none;
+
+		@include mq($bp4){
+			height: auto;
+			max-height: auto;
+			width: 100%;
+			max-width: none;
+		}
+	}
+
+	h3 {
+		line-height: 625px;
+		
+
+		@include mq($bp4){
+			line-height: 525px;
+		}
+
+		@include mq($bp3){
+			line-height: 250px;
+		}
+
+	}
+}
+
+.imageblock-square {
+	height: 300px;
+	margin-bottom: 25px;
+	// box-shadow: 0px 5px 15px lighten($beta-text-color,25);
+
+
+	@include mq($bp4){
+		height: 250px;
+	}
+
+
+}
+
+.imageblock-wide {
+	height: 300px;
+	// box-shadow: 0px 5px 15px lighten($beta-text-color,25);
+
+	@include mq($bp4){
+		height: 250px;
+	}
+	
+	@include mq($bp3){
+		margin-bottom: 25px;
+	}
+}
+
+
+.imageblock-long {
+	height: 625px;
+
+	@include mq($bp4){
+		height: 525px;
+	}
+
+	@include mq($bp3){
+		height: 250px;
+		margin-bottom: 25px;
+	}
+}
+
+.imageblock-right-block {
+	float: right;
+}
+
+
+//
+// page overlay
+//
+
+
+.imageblock-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 99999;
+  	top:        0; 
+	left:       0; 
+	@include background-opacity($alpha-text-color, .8);
+
+	img {
+		max-height: 50%;
+		max-width: 100%;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+
+.imageblock-overlay-left, .imageblock-overlay-right {
+	@include padding-tb(1,1);
+	border-radius: 15px;
+	background-color: $delta-text-color;
+	fill: $alpha-text-color;
+	opacity: .4;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 100px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 99999;
+}
+
+.imageblock-overlay-left {
+	@include px-padding-lr(4,3);
+	margin-left: -15px;
+	left: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageblock-overlay-right {
+	@include px-padding-lr(3,4);
+	margin-right: -15px;
+	right: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageblock-overlay-left:hover {
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageblock-overlay-right:hover {
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.imageblock-overlay-close {
+	fill: $delta-text-color;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	margin-top: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageblock-overlay-close:hover {
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}

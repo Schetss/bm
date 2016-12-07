@@ -1,0 +1,27 @@
+   
+ {% if overview %}
+    <div id="demo">
+        <div id="owl-overview" class="owl-carousel">
+                {% for overview in overview %}        
+                   <div class="item overview-item">
+                        <div class="overview-item-top">
+                            <img class="overview-item-thumbnail" alt="{{ overview.title }}" src="http://{{ SITE_DOMAIN }}/src/Frontend/Files/Overview/image/800x800/{{ overview.img }}" onload="imgLoaded(this)">
+                        </div>
+                        <div class="overview-item-bottom">
+                            <h4>{{ overview.title }}</h4>
+                            
+                            {{ overview.content|raw }}
+
+                            <a href="{{ overview.url }}">{{ overview.subtitle }}</a>
+                       
+                        </div>
+
+                       
+                       
+                    </div>
+
+                {% endfor %}
+        </div>
+    </div>
+        
+{% endif %}

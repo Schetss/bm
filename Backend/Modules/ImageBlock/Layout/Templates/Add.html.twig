@@ -1,0 +1,221 @@
+{% extends '/Layout/Templates/base.html.twig' %}
+
+{% block actionbar %}
+
+{% endblock %}
+
+{% block content %}
+
+  {% form add %}
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="title" class="control-label">{{ 'lbl.Title'|trans|ucfirst }}</label>
+        {% form_field title %} {% form_field_error title %}
+        {# {% if detailURL %}
+          <a class="site-url" href="{{ detailURL }}">{{ detailURL }}/<span id="generatedUrl"></span></a>
+        {% endif %}
+        {% if not detailURL %}
+          <p class="text-warning"><span class="fa fa-warning"></span> {{ 'err.NoModuleLinked'|trans|ucfirst }}</p>
+        {% endif %} #}
+      </div>
+    </div>
+  </div>
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#tabContent" aria-controls="tabContent" role="tab" data-toggle="tab">{{ 'lbl.Content'|trans|ucfirst }}</a>
+          </li>
+          <li class="pull-right" role="presentation">
+            <a href="#tabSEO" aria-controls="tabSEO" role="tab" data-toggle="tab">{{ 'lbl.SEO'|trans|ucfirst }}</a>
+          </li>         
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tabContent">
+            <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title_1'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title_1 %} {% form_field_error title_1 %}
+                      {% form_field image1 %} {% form_field_error image1 %}
+                        <p>Url</p>
+                      {% form_field linkurl1 %} {% form_field_error linkurl1 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title2'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title2 %} {% form_field_error title2 %}
+                      {% form_field image2 %} {% form_field_error image2 %}
+                        <p>Url</p>
+                      {% form_field linkurl2 %} {% form_field_error linkurl2 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title3'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title3 %} {% form_field_error title3 %}
+                      {% form_field image3 %} {% form_field_error image3 %}
+                        <p>Url</p>
+                      {% form_field linkurl3 %} {% form_field_error linkurl3 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title4'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title4 %} {% form_field_error title4 %}
+                      {% form_field image4 %} {% form_field_error image4 %}
+                        <p>Url</p>
+                      {% form_field linkurl4 %} {% form_field_error linkurl4 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title5'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title5 %} {% form_field_error title5 %}
+                      {% form_field image5 %} {% form_field_error image5 %}
+                        <p>Url</p>
+                      {% form_field linkurl5 %} {% form_field_error linkurl5 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title6'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title6 %} {% form_field_error title6 %}
+                      {% form_field image6 %} {% form_field_error image6 %}
+                        <p>Url</p>
+                      {% form_field linkurl6 %} {% form_field_error linkurl6 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title7'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title7 %} {% form_field_error title7 %}
+                      {% form_field image7 %} {% form_field_error image7 %}
+                        <p>Url</p>
+                      {% form_field linkurl7 %} {% form_field_error linkurl7 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title8'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title8 %} {% form_field_error title8 %}
+                      {% form_field image8 %} {% form_field_error image8 %}
+                        <p>Url</p>
+                      {% form_field linkurl8 %} {% form_field_error linkurl8 %}   
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <p>{{ 'lbl.Title9'|trans|ucfirst }}</p>
+                    </div>
+                    <div class="panel-body">
+                      <p>Naam</p>
+                      {% form_field title9 %} {% form_field_error title9 %}
+                      {% form_field image9 %} {% form_field_error image9 %}
+                        <p>Url</p>
+                      {% form_field linkurl9 %} {% form_field_error linkurl9 %}   
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <p>{{ 'lbl.MetaData'|trans|ucfirst }}</p>
+                  </div>
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label for="categoryId" class="control-label">{{ 'lbl.Category'|trans|ucfirst }}</label>
+                      {% form_field category_id %} {% form_field_error category_id %}
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div role="tabpanel" class="tab-pane" id="tabSEO">
+            {% seo %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row fork-module-actions">
+    <div class="col-md-12">
+      <div class="btn-toolbar">
+        <div class="btn-group pull-right" role="group">
+          <button id="addButton" type="submit" name="add" class="btn btn-primary">
+            <span class="fa fa-plus-square"></span>{{ 'lbl.Add'|trans|ucfirst }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="addCategoryDialog" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-title h4">{{ 'lbl.AddCategory'|trans|ucfirst }}</span>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="categoryTitle" class="control-label">
+              {{ 'lbl.Title'|trans|ucfirst }}
+              {{ macro.required }}
+            </label>
+            <input type="text" name="categoryTitle" id="categoryTitle" class="form-control" maxlength="255" />
+            <p class="text-danger" id="categoryTitle'err.r" style="display: none;">{{ 'err.FieldIsRequired'|trans|ucfirst }}</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            <span class="fa fa-times"></span>{{ 'lbl.Cancel'|trans|ucfirst }}
+          </button>
+          <button id="addCategorySubmit" type="button" class="btn btn-primary">
+            <span class="fa fa-plus-square"></span>{{ 'lbl.AddCategory'|trans|ucfirst }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endform %}
+
+{% endblock %}

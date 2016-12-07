@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+	<Backend>
+		<Overview>
+			<item type="label" name="AddOverview">
+				<translation language="nl"><![CDATA[Overview toevoegen]]></translation>
+				<translation language="en"><![CDATA[add Overview]]></translation>
+			</item>
+		</Overview>
+		<Core>
+			<item type="label" name="Overview">
+				<translation language="nl"><![CDATA[Overview]]></translation>
+				<translation language="en"><![CDATA[Overview]]></translation>
+			</item>
+			<item type="label" name="OverviewDetail">
+				<translation language="nl"><![CDATA[Overview detail]]></translation>
+				<translation language="en"><![CDATA[Overview detail]]></translation>
+			</item>
+			<item type="label" name="OverviewCategory">
+				<translation language="nl"><![CDATA[Overview categorie]]></translation>
+				<translation language="en"><![CDATA[Overview category]]></translation>
+			</item>
+			<item type="message" name="NoCategories">
+				<translation language="en"><![CDATA[no categories]]></translation>
+				<translation language="nl"><![CDATA[geen categorieën]]></translation>
+			</item>
+		</Core>
+	</Backend>
+	<Frontend>
+		<Core>
+		</Core>
+	</Frontend>
+</locale>
